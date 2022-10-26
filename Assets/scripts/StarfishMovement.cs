@@ -9,7 +9,7 @@ public class StarfishMovement : MonoBehaviour
         float rotation = transform.rotation.y;
         while (true)
         {
-            rotation += 10;
+            rotation += Random.Range(-50.0f, 50.0f);
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation)); // rotate on y axis
             yield return new WaitForSeconds(0.1f);
         }

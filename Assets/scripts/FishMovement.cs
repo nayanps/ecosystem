@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class FishMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5.0f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector3 pos = transform.position;
+
+        pos.x -= speed * Time.deltaTime;
+
+        if (pos.x < -9)
+        {
+            pos.y += Random.Range(-6.0f, 6.0f);
+            pos.x = 9;
+        }
+
+        transform.position = pos;
+
     }
 }
