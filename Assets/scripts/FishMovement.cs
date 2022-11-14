@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class FishMovement : MonoBehaviour
 {
@@ -38,7 +37,7 @@ public class FishMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag(animal_type))
         {
-            star_noise.Play();  
+            star_noise.Play();
             speed = -speed;
         }
     }
